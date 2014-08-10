@@ -8,9 +8,10 @@ html {
 }
 
 body {
-    font:1.0em normal Arial,sans-serif;
+    text-align: center;
+    font:1.2em normal Arial,sans-serif;
     color: #000;
-    background-color: #fff;
+    background-color: #939393;
     margin:0;
     padding:0;
 }
@@ -20,21 +21,46 @@ a, a:link, a:hover, a:visited, a:active {
    text-decoration: none;
 }
 
-table {
-    width: 940px;
-    margin-left: auto;
-    margin-right: auto;
-    border-spacing: 20px;
-    border-collapse: separate;
+table.main {
+  width: 1208px;
+  background-image: url(../images/line.png);
+  background-repeat: repeat-y;
+  margin-left: auto;
+  margin-right: auto;
+  border-spacing: 0px;
+  border-collapse: separate;
 }
 
-
-table td{
+/*
+table td {
   border:yellow solid 1px;
 }
+*/
 
+#big_phone_number {
+    font:1.6em normal Arial,sans-serif;
+}
 
+#callback_button {
+  font:1.0em normal Times,sans;
+  width: 150px;
+  height: 20px;
+  background-color: #fced42;
+  moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border: 1px solid #b39e00;
+  padding: 5px;
+}
 
+p.large_text {
+  font:1.6em normal Arial,sans-serif;
+  color: #201b61;
+}
+
+p.medium_text {
+  font:1.2em normal Arial,sans-serif;
+  color: #201b61;
+}
 
 
 
