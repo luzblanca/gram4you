@@ -31,6 +31,10 @@ input {
   padding: 0px;
 }
 
+button {
+    cursor: pointer;
+}
+
 table {
   margin-left: auto;
   margin-right: auto;
