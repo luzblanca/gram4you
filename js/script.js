@@ -29,5 +29,5 @@ function sendRequest() {
 function sendMail(subject, body) {
     var link =  "mailto:gram.for.you@gmail.com" +
                 "?subject=" + subject + "&body=" + body;
-    window.location.href = encodeURI(link);
+    window.open(encodeURI(link), '_blank').focus();
 }
