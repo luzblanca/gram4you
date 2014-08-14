@@ -8,9 +8,37 @@
         <title>Gram for You</title>
         <link type="image/png" rel="icon" href="images/favicon.png" />
         <link type="text/css" rel="stylesheet" href="css/style.css" />
-        <script type="text/javascript" src="js/analytics.js"></script>
+        <!-- <script type="text/javascript" src="js/analytics.js"></script> -->
+        <script type="text/javascript" src="js/jquery-1.7.2.min.js" ></script>
+        <script type="text/javascript" src="js/jquery.watermark.min.js"></script>
+        <script type="text/javascript" src="js/jquery.maskedinput.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
     </head>
     <body>
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript">
+        (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+        try {
+        w.yaCounter25873628 = new Ya.Metrika({id:25873628,
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true});
+        } catch(e) { }
+        });
+        var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+        if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+        </script>
+        <noscript><div><img src="//mc.yandex.ru/watch/25873628" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+        <!-- /Yandex.Metrika counter -->
         <table class="main">
             <tr>
                 <td>
@@ -18,8 +46,8 @@
                         <tr>
                             <td></td>
                             <td width="300px">
-                                <div id="big_phone_number"><a href="skype:+79684668787?call">8 968 466 87 87</a></div><br/>
-                                <div id="callback_button"><a href="javascript:void()">Закажите звонок</a></div>
+                                <div class="big_phone_number"><a href="skype:+79684668787?call">8 968 466 87 87</a></div><br/>
+                                <div class="callback_button"><a href="javascript:void()">Закажите звонок</a></div>
                             </td>
                         </tr>
                     </table>
@@ -38,7 +66,61 @@
             </tr>
             <tr>
                 <td>
-                    <img src="images/back.png" alt=""/>
+                    <div class="main_block">
+                        <img src="images/back.png" alt=""/>
+                        <div class="send_request_vertical">
+                            <p>Запишитесь на семинар</p>
+                            <input type="text" id="request_name"/><br/><br/>
+                            <input type="text" id="request_phone"/><br/><br/>
+                            <button class="request_button" onclick="sendRequest(); return false">Отправить заявку</button>
+                            <p class="small_italic_text">Ваши контактные данные в безопасности<br/> и не будут переданы третьим лицам</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <td>
+                <table class="info">
+                    <tr>
+                        <td>
+                            более<br/>10<br/>лет практики
+                        </td>
+                        <td>
+                            более<br/>2000<br/>учеников
+                        </td>
+                        <td>
+                            1<br/>крутая таблица
+                        </td>
+                    </tr>
+                </table>
+                <img src="images/separator.png" alt=""/>
+            </td>
+            <tr>
+                <td>
+                    <div class="send_request_horizontal">
+                        <p>Запишитесь на семинар</p><br/>
+                        <input type="text" id="request_name"/>&nbsp<input type="text" id="request_phone"/><br/>
+                        <button class="request_button" onclick="sendRequest(); return false">Отправить заявку</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>Отзывы</h2>
+                    <table class="reviews">
+                        <tr>
+                            <td>
+                                Это потрясающе! Впервые в жизни у меня есть полная уверенность когда какое время надо употребить! А что самое главное, я заметила, что используя ту методику, что дали нам на семинаре, можно не только быстро запомнить времена, но и довольно быстро научиться автоматически (не задумываясь) правильно строить фразы. Просто замечательно! Очень благодарна преподавателю!
+                            </td>
+                            <td>
+                                Любопытный семинар. Не пожалела, что сходила. Можно сказать, впервые увидела в одной схеме не только образование всех времен, но и то как они разворачиваются во времени, что дало мне понимание, когда какое время надо использовать. При этом все настолько просто, что диву даешься как раньше сам до этого не додумался.
+                                Что касается самого семинара... Материал подается легко и непринужденно. Дают много примеров, так что не запутаешься. Людей не толпа - можно было свободно задавать вопросы. Не было ощущения, что мы на какой-то гонке и любой ценой должны все успеть.
+                                В общем, мне понравилось - рекомендую всем, кто хочет быстро и легко вспомнить все времена и запомнить их, наконец, навсегда с помощью уникальной таблицы.
+                            </td>
+                            <td>
+                                
+                            </td>
+                        </tr>
+                    </table>
                 </td>
             </tr>
             <tr>

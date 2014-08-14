@@ -21,14 +21,45 @@ a, a:link, a:hover, a:visited, a:active {
    text-decoration: none;
 }
 
+input {
+  font:1.2em normal Arial,sans-serif;
+  width: 250px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 0px;
+  padding: 0px;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 table.main {
   width: 1208px;
   background-image: url(../images/line.png);
   background-repeat: repeat-y;
-  margin-left: auto;
-  margin-right: auto;
   border-spacing: 0px;
   border-collapse: separate;
+}
+
+table.info {
+  width: 80%;
+}
+
+table.info td {
+  width: 30%;
+}
+
+table.reviews {
+  width: 80%;
+}
+
+table.reviews td {
+  width: 30%;
+  text-align: justify;
+  vertical-align: top;
 }
 
 /*
@@ -37,18 +68,52 @@ table td {
 }
 */
 
-#big_phone_number {
+.big_phone_number {
     font:1.6em normal Arial,sans-serif;
 }
 
-#callback_button {
+.send_request_vertical, .send_request_horizontal {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.main_block {
+  position: relative;
+}
+
+.send_request_vertical {
+  position: absolute; 
+  top: 100px; 
+  right: 100px; 
+  width: 350px;
+  background-color: rgba(229, 224, 220, .8);
+}
+
+.send_request_horizontal {
+  width: 80%;
+  background-color: #ccdcee;
+}
+
+
+.callback_button {
   font:1.0em normal Times,sans;
   width: 150px;
   height: 20px;
   background-color: #fced42;
-  moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
+  border-radius: 8px;
   border: 1px solid #b39e00;
+  padding: 5px;
+}
+
+.request_button {
+  font:1.0em normal Arial,sans-serif;
+  width: 200px;
+  height: 40px;
+  background-color: #fced42;
+  border-radius: 8px;
+  border: 0px;
   padding: 5px;
 }
 
@@ -60,6 +125,11 @@ p.large_text {
 p.medium_text {
   font:1.2em normal Arial,sans-serif;
   color: #201b61;
+}
+
+p.small_italic_text {
+  font:0.6em normal Arial,sans-serif;
+  color: #686666;
 }
 
 
