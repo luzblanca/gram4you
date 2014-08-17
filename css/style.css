@@ -56,8 +56,16 @@ table.info td {
   width: 30%;
 }
 
-#post_result {
-  display:none;
+.post_result {
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  font: 0.7em normal Arial,sans-serif;
+  color: #fff;
+  background-color: #e11;
+  border-radius: 7px;
+  padding: 5px;
+  display: none;
 }
 
 table.result {
@@ -101,10 +109,10 @@ table td {
 
 .send_request_vertical {
   position: absolute; 
-  top: 100px; 
+  top: 75px; 
   right: 100px; 
   width: 350px;
-  background-color: rgba(229, 224, 220, .8);
+  background-color: rgba(229, 224, 220, .9);
 }
 
 .send_request_horizontal {
