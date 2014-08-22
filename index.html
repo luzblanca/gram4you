@@ -7,7 +7,7 @@
         <meta name="keywords" content="грамматика,курсы,английский" />
         <title>Gram for You</title>
         <link type="image/png" rel="icon" href="images/favicon.png" />
-        <link type="text/css" rel="stylesheet" href="css/style.css" />
+        <link type="text/css" rel="stylesheet" href="style.css" />
         <!-- <script type="text/javascript" src="js/analytics.js"></script> -->
         <script type="text/javascript" src="js/jquery-1.7.2.min.js" ></script>
         <script type="text/javascript" src="js/jquery.watermark.min.js"></script>
@@ -39,110 +39,142 @@
         </script>
         <noscript><div><img src="//mc.yandex.ru/watch/25873628" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
         <!-- /Yandex.Metrika counter -->
-        <table class="main">
-            <tr>
-                <td>
-                    <table>
-                        <tr>
-                            <td></td>
-                            <td width="300px">
-                                <div class="big_phone_number"><a href="skype:+79684668787?call">8 968 466 87 87</a></div><br/>
-                                <div class="callback_button"><a href="javascript:void()">Закажите звонок</a></div>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="images/separator.png" alt=""/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p class="large_text">Научим разбираться во всех временах<br/>английского глагола<br/>и уверенно применять их на практике</p>
-                    <p class="medium_text">Семинар “Все времена английского за 3 часа”<br/>на основе авторской разработки (Москва)</p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="main_block">
-                        <img src="images/back.png" alt=""/>
-                        <div class="send_request_vertical">
-                            <form>
-                                <p>Запишитесь на семинар</p>
-                                <input type="hidden" name="action" value="запись на семинар"/>
-                                <input type="text" name="name" class="form_name"/><br/><br/>
-                                <input type="text" name="phone" class="form_phone"/><br/><br/>
-                                <div class="post_result"></div><br/>
-                                <input type="submit" class="form_submit" value="Отправить заявку"/>
-                                <p class="small_italic_text">Ваши контактные данные в безопасности<br/> и не будут переданы третьим лицам</p>
-                            </form>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <td>
-                <table class="info">
-                    <tr>
-                        <td>
-                            более<br/>10<br/>лет практики
-                        </td>
-                        <td>
-                            более<br/>2000<br/>учеников
-                        </td>
-                        <td>
-                            1<br/>крутая таблица
-                        </td>
-                    </tr>
-                </table>
-                <img src="images/separator.png" alt=""/>
-            </td>
-            <tr>
-                <td>
-                    <div class="send_request_horizontal">
-                        <p>Запишитесь на семинар</p><br/>
-                        <input type="text" id="request_name"/>&nbsp<input type="text" id="request_phone"/><br/>
-                        <button class="request_button" onclick="sendRequest(); return false">Отправить заявку</button>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <h2>Отзывы</h2>
-                    <table class="reviews">
-                        <tr>
-                            <td>
-                                Это потрясающе! Впервые в жизни у меня есть полная уверенность когда какое время надо употребить! А что самое главное, я заметила, что используя ту методику, что дали нам на семинаре, можно не только быстро запомнить времена, но и довольно быстро научиться автоматически (не задумываясь) правильно строить фразы. Просто замечательно! Очень благодарна преподавателю!
-                            </td>
-                            <td>
-                                Любопытный семинар. Не пожалела, что сходила. Можно сказать, впервые увидела в одной схеме не только образование всех времен, но и то как они разворачиваются во времени, что дало мне понимание, когда какое время надо использовать. При этом все настолько просто, что диву даешься как раньше сам до этого не додумался.
-                                Что касается самого семинара... Материал подается легко и непринужденно. Дают много примеров, так что не запутаешься. Людей не толпа - можно было свободно задавать вопросы. Не было ощущения, что мы на какой-то гонке и любой ценой должны все успеть.
-                                В общем, мне понравилось - рекомендую всем, кто хочет быстро и легко вспомнить все времена и запомнить их, наконец, навсегда с помощью уникальной таблицы.
-                            </td>
-                            <td>
-                                
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="images/separator.png" alt=""/>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p><br/><br/><br/><br/><br/><br/><br/></p>
-                </td>
-            </tr>
-        </table>
+        <div id="background">
+            <div class="header">
+                <img id="image" src="images/logo.png" alt="" width="165" height="42" />
+                <p id="text">семинары по английскому языку</p>
+                <div id="phone"><a href="skype:+79684668787?call">8 968 466 87 87</a></div>
+                <div id="callback"><a href="#callback_form">Закажите звонок</a></div>
+            </div>
+            <img src="images/separator.png" alt="" width="1200" height="1"/>
+            <p class="large_text">Научим разбираться во всех временах<br/>английского глагола<br/>и уверенно применять их на практике</p>
+            <p>Семинар “Все времена английского за 3 часа”<br/>на основе авторской разработки (Москва)</p>
+            <div id="main_block">
+                <img src="images/back.png" alt="" width="1200" height="447"/>
+                
+                <div id="circles_promo_block">
+                    <img src="images/circles.png" alt="" width="450" height="370"/>
+                    <p id="small"><em>Акция!</em></p>
+                    <p id="big">Стоимость семинара<br/><strike>2000 &#8381;</strike><br/><em>1500 &#8381;</em><br/>до 20 августа</p>
+                </div>
+                <div class="send_request_vertical">
+                    <form>
+                        <p>Запишитесь на семинар</p>
+                        <input type="hidden" name="action" value="запись на семинар"/>
+                        <input type="text" name="name" class="form_name"/><br/><br/>
+                        <input type="text" name="phone" class="form_phone"/><br/><br/>
+                        <div class="post_result"></div><br/>
+                        <input type="submit" class="form_submit" value="Отправить заявку"/>
+                        <p class="small_text">Ваши контактные данные в безопасности<br/> и не будут переданы третьим лицам</p>
+                    </form>
+                </div>
+            </div>
+            <div id="stats_block">
+                <p id="left">более<br/><em>10</em><br/>лет практики</p>
+                <p id="center">более<br/><em>2000</em><br/>учеников</p>
+                <p id="right"><em>1</em><br/><br/>крутая<br/>таблица</p>
+            </div>
+            <img src="images/separator.png" alt="" width="1200" height="1"/>
+            <p class="large_text">Для кого этот семинар?</p>
+            <p>Вы только начали изучать английский<br/>и хотите сразу разобраться в системе времен</p>
+            <p>Вы уже учите английский<br/>и хотите объединить кусочки знаний в систему и восполнить пробелы</p>
+            <p>Вы давно не занимались и хотите освежить знания</p>
+            <p>Вы хотите получить стимул к дальнейшему изучению языка</p>
+            <div class="send_request_horizontal">
+                <form>
+                    <p>Запишитесь на семинар</p>
+                    <input type="hidden" name="action" value="запись на семинар"/>
+                    <input type="text" name="name" class="form_name"/>
+                    <input type="text" name="phone" class="form_phone"/>
+                    <div class="post_result"></div>
+                    <input type="submit" class="form_submit" value="Отправить заявку"/>
+                </form>
+            </div>
+            <img src="images/separator.png" alt="" width="1200" height="1"/>
+            <p class="large_text">Что такого особенного в этом семинаре?</p>
+            <div id="unique_block">
+                <div id="left">
+                    <img src="images/100percents.png" alt="" width="130" height="125"/>
+                    <p>гарантия<br/>понимания</p>
+                </div>
+                <div id="center">
+                    <img src="images/transformer.png" alt="" width="130" height="125"/>
+                    <p>уникальная<br/>таблица-транформер</p>
+                </div>
+                <div id="right">
+                    <img src="images/100percents.png" alt="" width="130" height="125"/>
+                    <p>удовольствия<br/>от занятия</p>
+                </div>
+            </div>
+            <img src="images/separator.png" alt="" width="1200" height="1"/>
+            <p class="large_text">Отзывы</p>
+            
+            <div id="reviews_block">
+                <p id="left">Это потрясающе! Впервые в жизни у меня есть полная уверенность когда какое время надо употребить! А что самое главное, я заметила, что используя ту методику, что дали нам на семинаре, можно не только быстро запомнить времена, но и довольно быстро научиться автоматически (не задумываясь) правильно строить фразы. Просто замечательно! Очень благодарна преподавателю!<br/><br/>Аня</p>
+                <p id="center">Любопытный семинар. Не пожалела, что сходила. Можно сказать, впервые увидела в одной схеме не только образование всех времен, но и то как они разворачиваются во времени, что дало мне понимание, когда какое время надо использовать. При этом все настолько просто, что диву даешься как раньше сам до этого не додумался. В общем, мне понравилось - рекомендую всем, кто хочет быстро и легко вспомнить все времена и запомнить их.<br/><br/>Оля</p>
+                <p id="right">Очень здорово!!! Волшебный квадрат работает, мы его разобрали весь!! это ведь большой объем информации, но материал подан легко, доходчиво! и три часа пролетели быстро. Даже мой уровень знания языка позволил делать упражнения со всеми наравне. и, что самое главное, я за это занятие перешла на новый уровень и очень мне это понравилось.<br/><br/>Наталья</p>
+            </div>
+            <img src="images/separator.png" alt="" width="1200" height="1"/>
+            <p class="large_text">Как это работает?</p>
+            <div id="details_block">
+                <div id="details_1">
+                    <img src="images/circle.png" alt="" width="153" height="150" />
+                    <div id="label"><p>Приходишь</p></div>
+                    <p>Структурируем<br/>накопленные<br/>знания</p>
+                </div>
+                <img id="arrow_1" src="images/arrow.png" alt="" width="77" height="25" />
+                <div id="details_2">
+                    <img src="images/circle.png" alt="" width="153" height="150" />
+                    <div id="label"><p>Слушаешь</p></div>
+                    <p>Дополняем<br/>недостающими<br/>элементами</p>
+                </div>
+                <img id="arrow_2" src="images/arrow.png" alt="" width="77" height="25" />
+                <div id="details_3">
+                    <img src="images/circle.png" alt="" width="153" height="150" />
+                    <div id="label"><p>Практикуешь</p></div>
+                    <p>Получаем базу<br/>на всю<br/>жизнь</p>
+                </div>
+                <img id="arrow_3" src="images/arrow.png" alt="" width="77" height="25" />
+                <div id="details_4">
+                    <img src="images/circle.png" alt="" width="153" height="150" />
+                    <div id="label"><p>Пользуешься</p></div>
+                    <p>Общаемся<br/>с<br/>удовольствием</p>
+                </div>
+            </div>
+            <img src="images/separator.png" alt="" width="1200" height="1"/>
+            <div id="promo_block">
+                <div id="promo_block_text">
+                    <p><em>Акция!</em> Стоимость семинара <strike>2000</strike> <em>1500</em> рублей до 20 августа</p>
+                </div>
+            </div>
+            <div class="send_request_horizontal">
+                <form>
+                    <p>Запишитесь на семинар</p>
+                    <input type="hidden" name="action" value="запись на семинар"/>
+                    <input type="text" name="name" class="form_name"/>
+                    <input type="text" name="phone" class="form_phone"/>
+                    <div class="post_result"></div>
+                    <input type="submit" class="form_submit" value="Отправить заявку"/>
+                </form>
+            </div>
+            <div class="send_request_horizontal">
+                <form id="callback_form">
+                    <p>Закажите обратный звонок</p>
+                    <input type="hidden" name="action" value="обратный звонок"/>
+                    <input type="text" name="name" class="form_name"/>
+                    <input type="text" name="phone" class="form_phone"/>
+                    <div class="post_result"></div>
+                    <input type="submit" class="form_submit" value="Заказать звонок"/>
+                </form>
+            </div>
+            <img src="images/separator.png" alt="" width="1200" height="1"/>
+            <div class="header">
+                <img id="image" src="images/logo.png" alt="" width="165" height="42"/>
+                <p id="text">семинары по английскому языку</p>
+                <div id="phone"><a href="skype:+79684668787?call">8 968 466 87 87</a></div>
+                <div id="callback"><a href="#callback_form">Закажите звонок</a></div>
+            </div>
+            <p></p>
+        </div>
     </body>
 </html>

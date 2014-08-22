@@ -1,5 +1,6 @@
 
 $(document).ready(function() {
+  $('img').on('dragstart', function(event) { event.preventDefault(); });
   $('.form_name').watermark("имя");
   $('.form_phone').watermark("телефон");
   $('.form_phone').mask("+7 (999) 999-9999");
