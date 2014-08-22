@@ -8,11 +8,10 @@
         <title>Gram for You</title>
         <link type="image/png" rel="icon" href="images/favicon.png" />
         <link type="text/css" rel="stylesheet" href="style.css" />
-        <!-- <script type="text/javascript" src="js/analytics.js"></script> -->
         <script type="text/javascript" src="js/jquery-1.7.2.min.js" ></script>
         <script type="text/javascript" src="js/jquery.watermark.min.js"></script>
         <script type="text/javascript" src="js/jquery.maskedinput.js"></script>
-        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="script.js"></script>
     </head>
     <body>
         <!-- Yandex.Metrika counter -->
@@ -39,12 +38,28 @@
         </script>
         <noscript><div><img src="//mc.yandex.ru/watch/25873628" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
         <!-- /Yandex.Metrika counter -->
+
+        <div id="callback_overlay"></div>
+        <div id="callback_form" class="send_request_vertical">
+            <form>
+                <img id="close_callback_form" src="images/cross.png" alt="" />
+                <p>Закажите обратный звонок</p>
+                <input type="hidden" name="action" value="обратный звонок"/>
+                <input type="text" name="name" class="form_name"/><br/><br/>
+                <input type="text" name="phone" class="form_phone"/><br/><br/>
+                <div class="post_result"></div><br/>
+                <input type="submit" class="form_submit" value="Заказать звонок"/>
+                <p class="small_text">Ваши контактные данные в безопасности<br/> и не будут переданы третьим лицам</p>
+            </form>
+        </div>
+
+
         <div id="background">
             <div class="header">
                 <img id="image" src="images/logo.png" alt="" width="165" height="42" />
                 <p id="text">семинары по английскому языку</p>
                 <div id="phone"><a href="skype:+79684668787?call">8 968 466 87 87</a></div>
-                <div id="callback"><a href="#callback_form">Закажите звонок</a></div>
+                <div id="callback">Закажите звонок</div>
             </div>
             <img src="images/separator.png" alt="" width="1200" height="1"/>
             <p class="large_text">Научим разбираться во всех временах<br/>английского глагола<br/>и уверенно применять их на практике</p>
@@ -157,22 +172,12 @@
                     <input type="submit" class="form_submit" value="Отправить заявку"/>
                 </form>
             </div>
-            <div class="send_request_horizontal">
-                <form id="callback_form">
-                    <p>Закажите обратный звонок</p>
-                    <input type="hidden" name="action" value="обратный звонок"/>
-                    <input type="text" name="name" class="form_name"/>
-                    <input type="text" name="phone" class="form_phone"/>
-                    <div class="post_result"></div>
-                    <input type="submit" class="form_submit" value="Заказать звонок"/>
-                </form>
-            </div>
             <img src="images/separator.png" alt="" width="1200" height="1"/>
             <div class="header">
                 <img id="image" src="images/logo.png" alt="" width="165" height="42"/>
                 <p id="text">семинары по английскому языку</p>
                 <div id="phone"><a href="skype:+79684668787?call">8 968 466 87 87</a></div>
-                <div id="callback"><a href="#callback_form">Закажите звонок</a></div>
+                <div id="callback">Закажите звонок</div>
                 <div id="social"><p class="small_text">Мы в соц. сетях</p>
                     <a href="https://vk.com/gram4you" target="_blank"><img src="images/vk.png" alt=""/></a>
                     <a href="http://instagram.com/gram4you" target="_blank"><img src="images/instagram.png" alt=""/></a>

@@ -2,6 +2,7 @@
 function toggleCallbackForm() {
     $("#callback_overlay").fadeToggle();
     $("#callback_form").fadeToggle();
+    $("#callback_form").find(".post_result").fadeOut();
 }
 
 $(document).ready(function() {
@@ -32,7 +33,7 @@ $(document).ready(function() {
       form.find(".post_result").show().fadeTo('slow', 0.5).fadeTo('slow', 1.0);
 
       if ($("#callback_form").is(':visible') && (response.indexOf("Ошибка:") != 0))
-        setTimeout(toggleForm, 2500);
+        setTimeout(toggleForm, 3000);
     });
   });
 });
