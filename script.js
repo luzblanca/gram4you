@@ -1,12 +1,17 @@
 
-function toggleCallbackForm() {
-    $("#callback_overlay").fadeToggle();
-    $("#callback_form").fadeToggle();
-    $("#callback_form").find(".post_result").fadeOut();
+function showCallbackForm() {
+    $("#callback_overlay").fadeIn();
+    $("#callback_form").fadeIn();
+}
+
+function hideCallbackForm() {
+    $("#callback_overlay").fadeOut();
+    $("#callback_form").fadeOut();
 }
 
 $(document).ready(function() {
-  var toggleForm = function () { toggleCallbackForm(); }
+  var showForm = function () { showCallbackForm(); }
+  var hideForm = function () { hideCallbackForm(); }
 
   $('img').on('dragstart', function(event) { event.preventDefault(); });
   
@@ -14,9 +19,9 @@ $(document).ready(function() {
   $('.form_phone').watermark("телефон");
   $('.form_phone').mask("+7 (999) 999-9999");
 
-  $('.header > #callback').click(toggleForm);
-  $('#callback_overlay').click(toggleForm);
-  $('#close_callback_form').click(toggleForm);
+  $('.header > #callback').click(showForm);
+  $('#callback_overlay').click(hideForm);
+  $('#close_callback_form').click(hideForm);
 
   $("form").on("submit", function(event) {
     event.preventDefault();
@@ -33,7 +38,7 @@ $(document).ready(function() {
       form.find(".post_result").show().fadeTo('slow', 0.5).fadeTo('slow', 1.0);
 
       if ($("#callback_form").is(':visible') && (response.indexOf("Ошибка:") != 0))
-        setTimeout(toggleForm, 3000);
+        setTimeout(hideForm, 2500);
     });
   });
 });

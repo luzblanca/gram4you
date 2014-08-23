@@ -93,16 +93,16 @@ div.header #phone {
 
 div.header #callback {
   position: absolute; 
-  top: 70px; 
-  right: 185px;
-  font:1.1em normal Times,sans;
+  top: 75px; 
+  right: 190px;
+  cursor: pointer;
+  font:1.0em normal Arial,sans-serif;
   width: 180px;
   height: 25px;
   background-color: #fced42;
   border-radius: 8px;
-  border: 1px solid #b39e00;
+  border: 0px;
   padding: 5px;
-  cursor: pointer;
 }
 
 div.header #social {

@@ -1,3 +1,24 @@
+<?
+error_reporting(error_reporting() & ~E_NOTICE & ~E_DEPRECATED);
+
+$campaign = $_GET['utm_campaign'];
+$referer = $_SERVER['HTTP_REFERER'];
+if (stristr($referer, 'yandex.ru'))     { $search = 'text=';    $crawler = 'Yandex';    }
+if (stristr($referer, 'rambler.ru'))    { $search = 'words=';   $crawler = 'Rambler';   }
+if (stristr($referer, 'google.ru'))     { $search = 'q=';       $crawler = 'Google';    }
+if (stristr($referer, 'google.com'))    { $search = 'q=';       $crawler = 'Google';    }
+if (stristr($referer, 'mail.ru'))       { $search = 'q=';       $crawler = 'Mail.Ru';   }
+if (stristr($referer, 'bing.com'))      { $search = 'q=';       $crawler = 'Bing';      }
+if (stristr($referer, 'qip.ru'))        { $search = 'query=';   $crawler = 'QIP';       }
+if (isset($crawler)) 
+{
+    $phrase = urldecode($referer);
+    eregi($search.'([^&]*)', $phrase.'&', $phrase2);
+    $phrase = $phrase2[1];
+    $referer = $crawler;
+}
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -48,11 +69,13 @@
                 <input type="text" name="name" class="form_name"/><br/><br/>
                 <input type="text" name="phone" class="form_phone"/><br/><br/>
                 <div class="post_result"></div><br/>
+                <input name="referer" type="hidden" value="<?=$referer?>">
+                <input name="phrase" type="hidden" value="<?=$phrase?>">
+                <input name="campaign" type="hidden" value="<?=$campaign?>">
                 <input type="submit" class="form_submit" value="Заказать звонок"/>
                 <p class="small_text">Ваши контактные данные в безопасности<br/> и не будут переданы третьим лицам</p>
             </form>
         </div>
-
 
         <div id="background">
             <div class="header">
@@ -63,14 +86,14 @@
             </div>
             <img src="images/separator.png" alt="" width="1200" height="1"/>
             <p class="large_text">Научим разбираться во всех временах<br/>английского глагола<br/>и уверенно применять их на практике</p>
-            <p>Семинар “Все времена английского за 3 часа”<br/>на основе авторской разработки (Москва)</p>
+            <p>Семинар «Все времена английского за 3 часа»<br/>на основе авторской разработки (Москва)</p>
             <div id="main_block">
                 <img src="images/back.png" alt="" width="1200" height="447"/>
                 
                 <div id="circles_promo_block">
                     <img src="images/circles.png" alt="" width="450" height="370"/>
                     <p id="small"><em>Акция!</em></p>
-                    <p id="big">Стоимость семинара<br/><strike>2000 &#8381;</strike><br/><em>1500 &#8381;</em><br/>до 20 августа</p>
+                    <p id="big">Стоимость семинара<br/><strike>2000 &#8381;</strike><br/><em>1500 &#8381;</em><br/>до 15 сентября</p>
                 </div>
                 <div class="send_request_vertical">
                     <form>
@@ -79,6 +102,9 @@
                         <input type="text" name="name" class="form_name"/><br/><br/>
                         <input type="text" name="phone" class="form_phone"/><br/><br/>
                         <div class="post_result"></div><br/>
+                        <input name="referer" type="hidden" value="<?=$referer?>">
+                        <input name="phrase" type="hidden" value="<?=$phrase?>">
+                        <input name="campaign" type="hidden" value="<?=$campaign?>">
                         <input type="submit" class="form_submit" value="Отправить заявку"/>
                         <p class="small_text">Ваши контактные данные в безопасности<br/> и не будут переданы третьим лицам</p>
                     </form>
@@ -102,6 +128,9 @@
                     <input type="text" name="name" class="form_name"/>
                     <input type="text" name="phone" class="form_phone"/>
                     <div class="post_result"></div>
+                    <input name="referer" type="hidden" value="<?=$referer?>">
+                    <input name="phrase" type="hidden" value="<?=$phrase?>">
+                    <input name="campaign" type="hidden" value="<?=$campaign?>">
                     <input type="submit" class="form_submit" value="Отправить заявку"/>
                 </form>
             </div>
@@ -159,7 +188,7 @@
             <img src="images/separator.png" alt="" width="1200" height="1"/>
             <div id="promo_block">
                 <div id="promo_block_text">
-                    <p><em>Акция!</em> Стоимость семинара <strike>2000</strike> <em>1500</em> рублей до 20 августа</p>
+                    <p><em>Акция!</em> Стоимость семинара <strike>2000</strike> <em>1500</em> рублей до 15 сентября</p>
                 </div>
             </div>
             <div class="send_request_horizontal">
@@ -169,6 +198,8 @@
                     <input type="text" name="name" class="form_name"/>
                     <input type="text" name="phone" class="form_phone"/>
                     <div class="post_result"></div>
+                    <input name="referer" type="hidden" value="<?=$referer?>">
+                    <input name="phrase" type="hidden" value="<?=$phrase?>">
                     <input type="submit" class="form_submit" value="Отправить заявку"/>
                 </form>
             </div>
