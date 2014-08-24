@@ -23,9 +23,9 @@ if (isset($crawler))
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name=viewport content="width=1250">
-        <meta name="description" content="Курсы английского языка">
-        <meta name="keywords" content="грамматика,курсы,английский" />
+        <meta name="viewport" content="width=1250">
+        <meta name="description" content="Курсы английского языка в Москве">
+        <meta name="keywords" content="грамматика,курсы,английский,москва" />
         <title>Gram for You</title>
         <link type="image/png" rel="icon" href="images/favicon.png" />
         <link type="text/css" rel="stylesheet" href="style.css" />
