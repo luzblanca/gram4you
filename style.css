@@ -26,7 +26,9 @@ a, a:link, a:hover, a:visited, a:active {
 
 @font-face {
   font-family: Rouble;
-  src: url(images/rouble.otf) format("opentype");
+  src:
+    url('images/rouble.eot') format('eot'),
+    url('images/rouble.otf') format('opentype');
 }
 
 span.rouble {
