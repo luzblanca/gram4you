@@ -93,7 +93,8 @@ if (isset($crawler))
                 <div id="circles_promo_block">
                     <img src="images/circles.png" alt="" width="450" height="370"/>
                     <p id="small"><em>Акция!</em></p>
-                    <p id="big">Стоимость семинара<br/><strike>2000 &#8381;</strike><br/><em>1500 &#8381;</em><br/>до 15 сентября</p>
+                    <p id="big">Стоимость семинара<br/><strike>2000</strike><br/>
+                        <em>1500 <span class="rouble">b</span></em><br/>до 15 сентября</p>
                 </div>
                 <div class="send_request_vertical">
                     <form>

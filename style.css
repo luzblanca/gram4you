@@ -24,6 +24,15 @@ a, a:link, a:hover, a:visited, a:active {
 /**********************************************
 ***********************************************/
 
+@font-face {
+  font-family: Rouble;
+  src: url(images/rouble.otf) format("opentype");
+}
+
+span.rouble {
+    font-family: Rouble;
+}
+
 p {
   font:1.1em normal Arial,sans-serif;
   color: #201b61;
