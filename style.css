@@ -25,15 +25,18 @@ a, a:link, a:hover, a:visited, a:active {
 ***********************************************/
 
 @font-face {
-  font-family: Rouble;
+  font-family: 'Rouble';
   src:
-    url('images/rouble.eot') format('eot'),
-    url('images/rouble.otf') format('opentype');
+    url('images/rouble.woff') format('woff'),
+    url('images/rouble.otf') format('opentype'),
+    url('images/rouble.ttf') format('truetype');
 }
 
 span.rouble {
     font-family: Rouble;
 }
+
+span.rub{ display: inline-block; line-height: 9px; border-bottom: 3px solid; } 
 
 p {
   font:1.1em normal Arial,sans-serif;
