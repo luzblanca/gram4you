@@ -17,6 +17,39 @@ if (isset($crawler))
     $phrase = $phrase2[1];
     $referer = $crawler;
 }
+
+$month_names = array(
+ 1=>"января",
+    "февраля",
+    "марта",
+    "апреля",
+    "мая",
+    "июня",
+    "июля",
+    "августа",
+    "сентября",
+    "октября",
+    "ноября",
+    "декабря",
+);
+
+$promo_date = date('j');
+$promo_month = date('n');
+
+if ($promo_date < 5)
+    $promo_date = 10;
+elseif ($promo_date >= 20)
+{
+    $promo_date = 10;
+    $promo_month += 1;
+    if ($promo_month > 12)
+        $promo_month = 1;
+}
+else
+    $promo_date = 25;
+
+$promo_date = $promo_date.' '.$month_names[$promo_month];
+
 ?>
 
 <!DOCTYPE html>
@@ -94,7 +127,7 @@ if (isset($crawler))
                     <img src="images/circles.png" alt="" width="450" height="370"/>
                     <p id="small"><em>Акция!</em></p>
                     <p id="big">Стоимость семинара<br/><strike>2000</strike><br/>
-                        <em>1500 <span class="rouble">b</span></em><br/>до 15 сентября</p>
+                        <em>1500 <span class="rouble">b</span></em><br/>до <?=$promo_date?></p>
                 </div>
                 <div class="send_request_vertical">
                     <form>
@@ -189,7 +222,7 @@ if (isset($crawler))
             <img src="images/separator.png" alt="" width="1200" height="1"/>
             <div id="promo_block">
                 <div id="promo_block_text">
-                    <p><em>Акция!</em> Стоимость семинара <strike>2000</strike> <em>1500</em> рублей до 15 сентября</p>
+                    <p><em>Акция!</em> Стоимость семинара <strike>2000</strike> <em>1500</em> рублей до <?=$promo_date?></p>
                 </div>
             </div>
             <div class="send_request_horizontal">
